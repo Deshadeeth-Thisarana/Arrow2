@@ -51,16 +51,20 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-Build by weebs for weebs, I specialize in managing anime and similar themed groups.
+Hi {}, my name is {}↗️! 
+
+I am an Anime themed group management bot created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](http://t.me/DeshadeethThisarana)
+
+My owner was helped by \n[★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](http://t.me/Prabha_sha) to create me.
+
 You can find my list of available commands with /help.
+
+You can use my sinhala translated bot also \n[👉Arrow👈](http://t.me/MrArrowbot)
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm Dr Stone & I help admins to manage their groups! Have a look at the following for an idea of some of \
-the things I can help you with.
+I am most powerful & I help admins to manage their groups! Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
  • /help: PM's you this message.
@@ -70,19 +74,18 @@ the things I can help you with.
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
 
-
 {}
 And the following:
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://images6.alphacoders.com/112/thumb-1920-1126615.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Senku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+[Arrow](t.me/MrArrow2bot) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [GitHub](https://github.com/deshadeeth-thisarana)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -200,31 +203,31 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text=" 👑 Summon Me ",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username)),
+                            text="🧰 Support Group 🧰",
+                            url="https://t.me/Gangoffriends"),
                          InlineKeyboardButton(
-                             text=" 🔔 Updates ",
-                             url="https://t.me/SenkuUpdates")
+                             text="📺 Update Channel 📺",
+                             url="https://t.me/gangoffriendschannel")
                      ],
                      [
                         InlineKeyboardButton(
-                            text=" ✨ Help ",
-                            url="https://t.me/SenkuRobot?start=help"),
-                         InlineKeyboardButton(
-                            text=" ⚡️ Get Started ",
-                             url="https://t.me/SenkuUpdates/4")        
+                            text="⛑ Help ⛑",
+                            url="https://t.me/{}?start=help".format(
+                                 context.bot.username)), 
+                       InlineKeyboardButton(
+                            text="⚡️ Developer ⚡️",
+                             url="https://t.me/DeshadeethThisarana")        
                        
                      ],
                      [
                         InlineKeyboardButton(
-                             text=" ❤️ Source Code ",
-                             url="https://github.com/FtSasaki/SenkuRobot")
+                             text="➕ Add me to Your Group ↗️",
+                             url="t.me/MrArrow2?startgroup=true"),
                     
                     ]]))
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+            "Hey! How can I help you?😊"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
