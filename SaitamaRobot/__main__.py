@@ -226,7 +226,7 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                              text="➕ Add me to Your Group ↗️",
-                             url="t.me/MrArrow2?startgroup=true"),
+                             url="t.me/MrArrow2bot?startgroup=true"),
                     
                     ]]))
     else:
@@ -507,7 +507,7 @@ def donate(update: Update, context: CallbackContext):
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
-                "[here]({})".format(DONATION_LINK),
+                "[Click here]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN)
 
     else:
@@ -548,7 +548,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online🙋‍♂️")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
