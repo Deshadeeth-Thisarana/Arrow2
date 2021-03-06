@@ -101,7 +101,7 @@ def check_flood(update, context) -> str:
 
     except BadRequest:
         msg.reply_text(
-            "I can't restrict people here, give me permissions first! Until then, I'll disable anti-flood."
+            "I can't restrict people here😒, give me permissions first! Until then, I'll disable anti-flood."
         )
         sql.set_flood(chat.id, 0)
         return (
@@ -404,11 +404,11 @@ __help__ = """
 Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
 will result in restricting that user.
  This will mute users if they send more than 10 messages in a row, bots are ignored.
- • `/flood`*:* Get the current flood control setting
+ • /flood*:* Get the current flood control setting
 • *Admins only:*
- • `/setflood <int/'no'/'off'>`*:* enables or disables flood control
+ • /setflood <int/'no'/'off'>*:* enables or disables flood control
  *Example:* `/setflood 10`
- • `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
+ • /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
 • *Note:*
  • Value must be filled for tban and tmute!!
  It can be:
