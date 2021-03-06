@@ -224,11 +224,11 @@ def anime(update: Update, context: CallbackContext):
         image = json.get('bannerImage', None)
         if trailer:
             buttons = [[
-                InlineKeyboardButton("More Info", url=info),
+                InlineKeyboardButton("More Info📃", url=info),
                 InlineKeyboardButton("Trailer 🎬", url=trailer)
             ]]
         else:
-            buttons = [[InlineKeyboardButton("More Info", url=info)]]
+            buttons = [[InlineKeyboardButton("More Info📃", url=info)]]
         if image:
             try:
                 update.effective_message.reply_photo(
@@ -326,7 +326,7 @@ def manga(update: Update, context: CallbackContext):
             msg += f"{x}, "
         msg = msg[:-2]
         info = json['siteUrl']
-        buttons = [[InlineKeyboardButton("More Info", url=info)]]
+        buttons = [[InlineKeyboardButton("More Info📃", url=info)]]
         image = json.get("bannerImage", False)
         msg += f"_{json.get('description', None)}_"
         if image:
@@ -418,12 +418,10 @@ def user(update: Update, context: CallbackContext):
 
     caption += f"*About*: {about_string}"
 
-    buttons = [[InlineKeyboardButton(info_btn, url=user['url'])],
-               [
-                   InlineKeyboardButton(
-                       close_btn,
-                       callback_data=f"anime_close, {message.from_user.id}")
-               ]]
+    buttons = [
+                [InlineKeyboardButton(info_btn, url=user['url'])],
+                [InlineKeyboardButton(close_btn,callback_data=f"anime_close, {message.from_user.id}")]
+              ]
 
     update.effective_message.reply_photo(
         photo=img,
@@ -483,7 +481,7 @@ def button(update: Update, context: CallbackContext):
                 disable_web_page_preview=False)
             progress_message.delete()
         else:
-            query.answer("You are not allowed to use this.")
+            query.answer("You are not allowed to use this🤨")
 
 
 def site_search(update: Update, context: CallbackContext, site: str):
@@ -554,7 +552,7 @@ def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
 
 
-__help__ = """
+__help__ = ""
 Get information about anime, manga or characters from [AniList](anilist.co).
 
 *Available commands:*
