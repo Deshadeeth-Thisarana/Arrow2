@@ -88,7 +88,7 @@ SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 [Arrow](t.me/MrArrow2bot) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
+You can donate to the original writer of the Base code, Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ
 There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [GitHub](https://github.com/deshadeeth-thisarana)."""
 
 IMPORTED = {}
