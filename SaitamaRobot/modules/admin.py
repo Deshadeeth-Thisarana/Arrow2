@@ -37,14 +37,14 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not (promoter.can_promote_members or
             promoter.status == "creator") and not user.id in DRAGONS:
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("You don't have the necessary rights to do that😠")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "You don't seem to be referring to a user or the ID specified is incorrect🤦‍♂️..."
         )
         return
 
@@ -55,12 +55,12 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'administrator' or user_member.status == 'creator':
         message.reply_text(
-            "How am I meant to promote someone that's already an admin?")
+            "How am I meant to promote someone that's already an admin?🤨")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't promote myself! Get an admin to do it for me.")
+            "I can't promote myself! Get an admin to do it for me.🙄")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -81,14 +81,14 @@ def promote(update: Update, context: CallbackContext) -> str:
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
             message.reply_text(
-                "I can't promote someone who isn't in the group.")
+                "I can't promote someone who isn't in the group😤")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("An error occured while promoting🧐")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"I promoted <b>{user_member.user.first_name or user_id}</b> sucessfully😁",
         parse_mode=ParseMode.HTML)
 
     log_message = (
@@ -118,7 +118,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "You don't seem to be referring to a user or the ID specified is incorrect🤦‍♂️.."
         )
         return
 
@@ -129,16 +129,16 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how would I demote them?")
+            "This person CREATED the chat, how would I demote them?😬")
         return
 
     if not user_member.status == 'administrator':
-        message.reply_text("Can't demote what wasn't promoted!")
+        message.reply_text("Can't demote what wasn't promoted by me😐")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't demote myself! Get an admin to do it for me.")
+            "I can't demote myself! Get an admin to do it for me🤕")
         return
 
     try:
@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"I demoted <b>{user_member.user.first_name or user_id}</b> sucessfully😝",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -169,8 +169,8 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "Could not demote. I might not be admin, or the admin status was appointed by another"
-            " user, so I can't act upon them!")
+            "Could not demote😔. I am not an admin😐, or the admin status was appointed by another"
+            " user😬, so I can't act upon them!")
         return
 
 
@@ -182,7 +182,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("Admins cache refreshed!")
+    update.effective_message.reply_text("Admins cache refreshed👍")
 
 
 @run_async
@@ -205,46 +205,46 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "You don't seem to be referring to a user or the ID specified is incorrect🤦‍♂️.."
         )
         return
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how can i set custom title for him?")
+            "This person CREATED the chat, how can i set custom title for him?🤨")
         return
 
     if not user_member.status == 'administrator':
         message.reply_text(
-            "Can't set title for non-admins!\nPromote them first to set custom title!"
+            "Can't set title for non-admins😠\nPromote them first to set custom title😒"
         )
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't set my own title myself! Get the one who made me admin to do it for me."
+            "I can't set my own title myself😠 Get the one who made me admin to do it for me."
         )
         return
 
     if not title:
-        message.reply_text("Setting blank title doesn't do anything!")
+        message.reply_text("Setting blank title doesn't do anything😡")
         return
 
     if len(title) > 16:
         message.reply_text(
-            "The title length is longer than 16 characters.\nTruncating it to 16 characters."
+            "The title length is longer than 16 characters😒\nTruncating it to 16 characters."
         )
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
         message.reply_text(
-            "I can't set custom title for admins that I didn't promote!")
+            "I can't set custom title for admins that I didn't promote😣")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
+        f"I set title for <code>{user_member.user.first_name or user_id}</code> successfully🙂"
         f"to <code>{html.escape(title[:16])}</code>!",
         parse_mode=ParseMode.HTML)
 
@@ -336,7 +336,7 @@ def invite(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I can only give you invite links for supergroups and channels, sorry!"
+            "I can only give you invite links for supergroups and channels😠, sorry😕!"
         )
 
 
@@ -350,7 +350,7 @@ def adminlist(update, context):
 
     if update.effective_message.chat.type == "private":
         send_message(update.effective_message,
-                     "This command only works in Groups.")
+                     "This command only works in Groups👥")
         return
 
     chat = update.effective_chat
@@ -376,7 +376,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == '':
-            name = "☠ Deleted Account"
+            name = "☠ Deleted Account ☠️"
         else:
             name = "{}".format(
                 mention_html(
@@ -409,7 +409,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == '':
-            name = "☠ Deleted Account"
+            name = "☠ Deleted Account ☠️"
         else:
             name = "{}".format(
                 mention_html(
@@ -457,15 +457,15 @@ __help__ = """
  • `/admins`*:* list of admins in the chat
 
 *Admins only:*
- • `/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
- • `/unpin`*:* unpins the currently pinned message
- • `/invitelink`*:* gets invitelink
- • `/promote`*:* promotes the user replied to
- • `/demote`*:* demotes the user replied to
- • `/title <title here>`*:* sets a custom title for an admin that the bot promoted
- • `/admincache`*:* force refresh the admins list
- • `/zombies` *:* Scan deleted accounts
- • `/zombies clean` *:* Cleans deleted accounts
+ • /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
+ • /unpin*:* unpins the currently pinned message
+ • /invitelink*:* gets invitelink
+ • /promote*:* promotes the user replied to
+ • /demote*:* demotes the user replied to
+ • /title <title here>*:* sets a custom title for an admin that the bot promoted
+ • /admincache*:* force refresh the admins list
+ • /zombies *:* Scan deleted accounts
+ • /zombies clean *:* Cleans deleted accounts
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
