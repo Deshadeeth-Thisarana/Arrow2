@@ -1,15 +1,15 @@
 {
-      "name": "SenkuRobot",
+      "name": "Arrow bot",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "Senku"
+         "Arrow"
       ],   
-   "repository": "https://github.com/FtSasaki/SenkuRobot",
-   "logo": "https://64.media.tumblr.com/0b9df3c98abd7506f0aa20c7ae11cb44/15b7ca8e73e46fcc-e4/s640x960/8c4da729e10aaff950d29eaefd8e222aad5de164.jpg",
+   "repository": "https://github.com/deshadeeth-thisarana/Arrow2",
+   "logo": "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg",
    "addons": [
     {
          "options": {
@@ -52,16 +52,16 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1343957402"
+         "value": "1041727415"
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "UserName"
+         "value": "DeshadeethThisarana"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
          "required": true,
-         "value": "MyAwesomeSupportGroupGoesHere"
+         "value": "GangOfFriends"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -86,7 +86,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Saitama support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "660565862 459034222 189005567 346981140 367222759"
+         "value": "1041727415"
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
@@ -100,22 +100,22 @@
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "459034222 189005567 660565862 346981140 367222759"
+         "value": "1041727415"
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "615304572"
+         "value": "1041727415"
       },
       "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": ""
+         "value": "1041727415"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": ""
+         "value": "1041727415"
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
@@ -153,7 +153,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
          "required": false,
-         "value": "https://www.paypal.me/PaulSonOfLars"
+         "value": "https://www.paypal.me/Deshadeeth"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
