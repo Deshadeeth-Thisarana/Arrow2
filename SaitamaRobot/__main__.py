@@ -331,25 +331,42 @@ def get_help(update: Update, context: CallbackContext):
             module = args[1].lower()
             update.effective_message.reply_text(
                 f"Contact me in PM to get help of {module.capitalize()}",
-                reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton(
-                        text="⛑ Help ⛑",
-                        url="t.me/{}?start=ghelp_{}".format(
-                            context.bot.username, module))
-                        text="🧰 Support Group 🧰"
-                        url="t.me/Gangoffriends"
-                ]]))
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                      [
+                            InlineKeyboardButton(
+                                text="⛑ Help ⛑",
+                                url="t.me/{}?start=ghelp_{}".format(context.bot.username, module),
+                      
+                            )
+                      ]
+                    ]
+                ),
+            )
             return
         update.effective_message.reply_text(
             "Contact me in PM to get the list of possible commands.",
-            reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton(
-             text="⛑ Help ⛑",
-                        url="t.me/{}?start=ghelp_{}".format(
-                            context.bot.username, module))
-                        text="🧰 Support Group 🧰"
-                        url="t.me/Gangoffriends"
-                ]]))
+            reply_markup=InlineKeyboardMarkup(
+              [
+                [
+                      InlineKeyboardButton(
+                         text="⛑ Help ⛑",
+                         url="t.me/{}?start=ghelp_{}".format(context.bot.username),
+              
+                      )
+                ],        
+                [
+                       InlineKeyboardButton(  
+                          text="🧰 Support Group 🧰"
+                          url="t.me/Gangoffriends",
+            
+                       )  
+                         
+                 ],
+              ]
+           ),
+        )
+ 
             return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
