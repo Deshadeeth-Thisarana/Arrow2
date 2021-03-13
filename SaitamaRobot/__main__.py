@@ -357,7 +357,7 @@ def get_help(update: Update, context: CallbackContext):
                 ],        
                 [
                        InlineKeyboardButton(  
-                          text="🧰 Support Group 🧰"
+                          text="🧰 Support Group 🧰",
                           url="t.me/Gangoffriends",
             
                        )  
