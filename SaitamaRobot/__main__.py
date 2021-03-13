@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER, ARROW_IMG,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK, pbot,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
@@ -84,10 +84,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
+SAITAMA_IMG = ARROW_IMG
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-[Arrow](t.me/MrArrow2bot) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+[{}](ARROW_IMG) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ
 There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [GitHub](https://github.com/deshadeeth-thisarana)."""
 
@@ -175,7 +175,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id, HELPABLE[mod].__help__,
                     InlineKeyboardMarkup([[
                         InlineKeyboardButton(
-                            text="Back", callback_data="help_back")
+                            text="🔙Back", callback_data="help_back")
                     ]]))
             elif args[0].lower() == "markdownhelp":
                 IMPORTED["extras"].markdown_help_sender(update)
@@ -286,7 +286,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back", callback_data="help_back")
+                        text="🔙Back", callback_data="help_back")
                 ]]))
 
         elif prev_match:
@@ -333,19 +333,24 @@ def get_help(update: Update, context: CallbackContext):
                 f"Contact me in PM to get help of {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Help",
+                        text="⛑ Help ⛑",
                         url="t.me/{}?start=ghelp_{}".format(
                             context.bot.username, module))
+                        text="🧰 Support Group 🧰"
+                        url="t.me/Gangoffriends"
                 ]]))
             return
         update.effective_message.reply_text(
             "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Help",
-                    url="t.me/{}?start=help".format(context.bot.username))
-            ]]))
-        return
+             text="⛑ Help ⛑",
+                        url="t.me/{}?start=ghelp_{}".format(
+                            context.bot.username, module))
+                        text="🧰 Support Group 🧰"
+                        url="t.me/Gangoffriends"
+                ]]))
+            return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
@@ -354,7 +359,7 @@ def get_help(update: Update, context: CallbackContext):
         send_help(
             chat.id, text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back",
+                [[InlineKeyboardButton(text="🔙Back",
                                        callback_data="help_back")]]))
 
     else:
@@ -507,8 +512,7 @@ def donate(update: Update, context: CallbackContext):
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
-                "[Click here]({})".format(DONATION_LINK),
-                parse_mode=ParseMode.MARKDOWN)
+                "[Click here](t.me/deshadeeththisarana)"
 
     else:
         try:
