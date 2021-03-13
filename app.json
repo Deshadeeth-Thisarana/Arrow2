@@ -54,6 +54,11 @@
          "required": true,
          "value": "1041727415"
       },
+      "ARROW_IMG": {
+         "description": "Image of your bots welcome message",
+         "required": true,
+         "value": "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
+      },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
          "value": "DeshadeethThisarana"
