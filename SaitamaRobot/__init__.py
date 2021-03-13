@@ -94,7 +94,8 @@ if ENV:
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
-    
+    ARROW_IMG = os.environ.get("ARROW_IMG", 
+                               'https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg')
     
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
