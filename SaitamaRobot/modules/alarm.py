@@ -1,8 +1,8 @@
-from julia import tbot
+from SaitamaRobot import tbot
 from telethon import *
 from pymongo import MongoClient
-from julia import MONGO_DB_URI, CMD_HELP
-from julia.events import register
+from SaitamaRobot import MONGO_DB_URI, CMD_HELP
+from SaitamaRobot.events import register
 import dateparser
 import os, asyncio
 
