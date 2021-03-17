@@ -92,7 +92,14 @@ All Errors are now fixed and the bot is working fine..
        
       ![Arrow](https://telegra.ph/file/0e7f33382dff994245b85.jpg)
        
- 
+
+# *Special Credits*
+  ¬ [PaulOfLarsen](github.com/PaulOfLars) - Saitama bot owner
+  ¬ [Dr. Stone](https://t.me/SenkuGenius) - Senku bot owner
+  ¬ [GD Hiruna](github.com/hirunaofficial)- Dewmi bot owner 
+  ¬ [InuKaAsiTh](github.com/inukaasith)   - DaisyX bot owner
+  ¬ [Prabhasha](github.com/prabhasha-p)   - Hexzy bot owner
+
 # *A message for Experts*
    
    - Always you can change the owner name id and other settings when publishing..
@@ -101,4 +108,4 @@ All Errors are now fixed and the bot is working fine..
    - You can remove entry Daisy logo in Main.py.
    - Link your Credit card to Heroku for get extra amount of dynos.
      
-# *I am just a learner and this is the code I used as Rose bot*
+# *I am just a learner and this is the code I used as Shadow bot*
