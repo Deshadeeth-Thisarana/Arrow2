@@ -94,7 +94,12 @@ All Errors are now fixed and the bot is working fine..
        
 
 # *Special Credits*
-  ¬ [PaulOfLarsen](github.com/PaulOfLars) - Saitama bot owner \n¬ [Dr. Stone](https://t.me/SenkuGenius) - Senku bot owner \n¬ [GD Hiruna](github.com/hirunaofficial)- Dewmi bot owner \n¬ [InuKaAsiTh](github.com/inukaasith)   - DaisyX bot owner\n¬ [Prabhasha](github.com/prabhasha-p)   - Hexzy bot owner
+  
+  - [PaulOfLarsen](github.com/PaulOfLars) -> Saitama bot owner 
+  - [Dr. Stone](https://t.me/SenkuGenius) -> Senku bot owner 
+  - [GD Hiruna](github.com/hirunaofficial)-> Dewmi bot owner 
+  - [InuKaAsiTh](github.com/inukaasith)   -> DaisyX bot owner
+  - [Prabhasha](github.com/prabhasha-p)   -> Hexzy bot owner
 
 # *A message for Experts*
    
