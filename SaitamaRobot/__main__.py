@@ -63,6 +63,7 @@ You can use my sinhala translated bot also \n[👉Arrow👈](http://t.me/MrArrow
 
 ©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](http://t.me/gangoffriends) 
 ©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](http://t.me/DeshadeethThisarana) 
+
 ⚠️All Rights Reserved⚠️
 """
 
@@ -77,7 +78,6 @@ I am most powerful & I help admins to manage their groups! Have a look at the fo
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-
 {}
 And the following:
 """.format(
@@ -89,7 +89,7 @@ SAITAMA_IMG = ARROW_IMG
 DONATE_STRING = """Heya, glad to hear you want to donate!
 [{}](ARROW_IMG) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ
-There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [GitHub](https://github.com/deshadeeth-thisarana)."""
+There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [Paypal](https://paypal.me/deshadeeththisarana)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -368,7 +368,7 @@ def get_help(update: Update, context: CallbackContext):
         )
         return
 
-   elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
+ elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
@@ -438,7 +438,7 @@ def settings_button(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back",
+                        text="🔙Back",
                         callback_data="stngs_back({})".format(chat_id))
                 ]]))
 
