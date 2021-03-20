@@ -154,6 +154,7 @@ __help__ = """
 **NOTE:** 
 Please turn on notifications(PM/Group Chat) otherwise you will not get notification for the alarm !
 """
-mod_name = Alarm ⏰
+__mod_name__ = "Alarm ⏰"
+_command_list_ = "setalarm"
 
 CMD_HELP.update({file_helpo: [file_helpo, __help__]})
