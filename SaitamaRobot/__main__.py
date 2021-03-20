@@ -87,7 +87,7 @@ And the following:
 SAITAMA_IMG = ARROW_IMG
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-[{}](ARROW_IMG) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+[{dispatcher.bot.first_name}](ARROW_IMG) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ
 There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [Paypal](https://paypal.me/deshadeeththisarana)."""
 
@@ -528,7 +528,7 @@ def donate(update: Update, context: CallbackContext):
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
-                "[Click here](t.me/deshadeeththisarana)"
+                "👉[Click here](t.me/deshadeeththisarana)[👈](ARROW_IMG)"
 
     else:
         try:
