@@ -52,7 +52,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_text(
-                "Trying to put me against a God level person? [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana) is my owner")
+                "Trying to put me against a God level person? [Đ€Ş卄ΔĐ€€Ť卄](t.me/DeshadeethThisarana) is my owner")
             return log_message
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")
@@ -378,10 +378,10 @@ __help__ = """
  • /punchme*:* punchs the user who issued the command
 
 *Admins only:*
- • /ban <userhandle>*:* bans a user. (via handle, or reply)
- • /tban <userhandle> `x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- • /unban <userhandle>*:* unbans a user. (via handle, or reply)
- • /punch <userhandle>*:* Punches a user out of the group, (via handle, or reply)
+ • /ban `<userhandle>`*:* bans a user. (via handle, or reply)
+ • /tban `<userhandle>` `x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ • /unban `<userhandle>`*:* unbans a user. (via handle, or reply)
+ • /punch `<userhandle>`*:* Punches a user out of the group, (via handle, or reply)
 """
 
 BAN_HANDLER = CommandHandler("ban", ban)
@@ -399,7 +399,7 @@ dispatcher.add_handler(UNBAN_HANDLER)
 dispatcher.add_handler(ROAR_HANDLER)
 dispatcher.add_handler(PUNCHME_HANDLER)
 
-__mod_name__ = "🚶‍♂️Bans🚶‍♂️"
+__mod_name__ = "Bans"
 __handlers__ = [
     BAN_HANDLER, TEMPBAN_HANDLER, PUNCH_HANDLER, UNBAN_HANDLER, ROAR_HANDLER,
     PUNCHME_HANDLER
