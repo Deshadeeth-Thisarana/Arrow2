@@ -88,13 +88,13 @@ __help__ = """
  • /react*:* Reacts with a random reaction 
 
 *Urban Dictonary:*
- • /ud <word>*:* Type the word or expression you want to search use
+ • /ud `<word>`*:* Type the word or expression you want to search use
 
 *Wikipedia:*
- • /wiki <query>*:* wikipedia your query
+ • /wiki `<query>`*:* wikipedia your query
 
 *Wallpapers:*
- • /wall <query>*:* get a wallpaper from wall.alphacoders.com
+ • /wall `<query>`*:* get a wallpaper from wall.alphacoders.com
 
 *Currency converter:* 
  • /cash*:* currency converter
@@ -111,7 +111,7 @@ MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 
-__mod_name__ = "✨Extras✨"
+__mod_name__ = "Extras"
 __command_list__ = ["id", "echo"]
 __handlers__ = [
     ECHO_HANDLER,
