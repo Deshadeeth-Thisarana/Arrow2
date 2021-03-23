@@ -90,10 +90,12 @@ def gettime(update: Update, context: CallbackContext):
 
 
 __help__ = """
- • `/time <query>`*:* Gives information about a timezone.
+ • /time `<query>`*:* Gives information about a timezone.
 
-*Available queries:* Country Code/Country Name/Timezone Name
-• 🕐 [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+*Available queries:* Country Code / Country Name / Timezone Name
+
+• 🕐 [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) [🕐](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/2017a.png/1024px-2017a.png)
+
 """
 
 TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
