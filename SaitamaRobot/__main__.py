@@ -344,27 +344,18 @@ def get_help(update: Update, context: CallbackContext):
                 ),
             )
             return
-        update.effective_message.reply_text(
+         update.effective_message.reply_text(
             "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup(
-              [
                 [
-                      InlineKeyboardButton(
-                         text="⛑ Help ⛑",
-                         url="t.me/{}?start=ghelp_{}".format(context.bot.username),
-              
-                      )
-                ],        
-                [
-                       InlineKeyboardButton(  
-                          text="🧰 Support Group 🧰",
-                          url="t.me/Gangoffriends",
-            
-                       )  
-                         
-                 ]
-              ]
-           )
+                    [
+                        InlineKeyboardButton(
+                            text="⛑ Help ⛑",
+                            url="t.me/{}?start=help".format(context.bot.username),
+                        )
+                    ]
+                ]
+            ),
         )
         return
 
