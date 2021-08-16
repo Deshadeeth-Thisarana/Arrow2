@@ -55,16 +55,7 @@ Hi {}, my name is {}↗️!
 
 I am an Anime themed group management bot created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](http://t.me/DeshadeethThisarana)
 
-My owner was helped by \n[★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](http://t.me/Prabha_sha) to create me.
-
 You can find my list of available commands with /help.
-
-You can use my sinhala translated bot also \n[👉Arrow👈](http://t.me/MrArrowbot)
-
-©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](http://t.me/gangoffriends) 
-©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](http://t.me/DeshadeethThisarana) 
-
-⚠️All Rights Reserved⚠️
 """
 
 HELP_STRINGS = """
