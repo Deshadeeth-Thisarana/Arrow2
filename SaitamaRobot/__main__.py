@@ -78,7 +78,7 @@ And the following:
 SAITAMA_IMG = ARROW_IMG
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-[{dispatcher.bot.first_name}](ARROW_IMG) is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+{dispatcher.bot.first_name} is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ
 There are two ways of supporting him; [Telegram](t.me/DeshadeethThisarana) or [Paypal](https://paypal.me/deshadeeththisarana)."""
 
@@ -199,10 +199,10 @@ def start(update: Update, context: CallbackContext):
                     [[
                         InlineKeyboardButton(
                             text="🧰 Support Group 🧰",
-                            url="https://t.me/Gangoffriends"),
+                            url="https://t.me/shadowbotsupport"),
                          InlineKeyboardButton(
                              text="📺 Update Channel 📺",
-                             url="https://t.me/gangoffriendschannel")
+                             url="https://t.me/shadowbotupdates")
                      ],
                      [
                         InlineKeyboardButton(
@@ -211,13 +211,14 @@ def start(update: Update, context: CallbackContext):
                                  context.bot.username)), 
                        InlineKeyboardButton(
                             text="⚡️ Developer ⚡️",
-                             url="https://t.me/DeshadeethThisarana")        
+                            url="https://t.me/DeshadeethThisarana")        
                        
                      ],
                      [
                         InlineKeyboardButton(
-                             text="➕ Add me to Your Group ↗️",
-                             url="t.me/MrArrow2bot?startgroup=true"),
+                            text="➕ Add me to Your Group ↗️",
+                            url="t.me/{}?startgroup=true".format(
+                                 context.bot.usrrname)),
                     
                     ]]))
     else:
