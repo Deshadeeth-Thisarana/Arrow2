@@ -106,7 +106,7 @@ All Errors are now fixed and the bot is working fine..
    - Always you can change the owner name id and other settings when publishing..
    - The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.
    - Paste your coffeehouse api to activate your own chatbot.
-   - You can remove entry Daisy logo in Main.py.
+   - You can remove entry Arrow logo in Main.py.
    - Link your Credit card to Heroku for get extra amount of dynos.
      
 # *I am just a learner and this is the code I used as Shadow bot*
