@@ -334,21 +334,13 @@ def get_help(update: Update, context: CallbackContext):
                       ]
                     ]
                 ),
-            )
-            return
-         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="⛑ Help ⛑",
-                            url="t.me/{}?start=help".format(context.bot.username),
-                        )
-                    ]
-                ]
             ),
-        )
+            return
+         
+        update.effective_message.reply_text(
+            "Contact me in PM to get the list of possible commands.",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⛑ Help ⛑", url="t.me/{}?start=help".format(context.bot.username))]],
+        ),
         return
 
  elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
@@ -358,8 +350,7 @@ def get_help(update: Update, context: CallbackContext):
         send_help(
             chat.id, text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙Back",
-                                       callback_data="help_back")]]))
+                [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
