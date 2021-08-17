@@ -335,13 +335,19 @@ def get_help(update: Update, context: CallbackContext):
                     ]
                 ),
             ),
+            
             return
          
         update.effective_message.reply_text(
             "Contact me in PM to get the list of possible commands.",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⛑ Help ⛑", url="t.me/{}?start=help".format(context.bot.username))]],
-        ),
-        return
+            reply_markup=InlineKeyboardMarkup(
+              [[
+                InlineKeyboardButton(text="⛑ Help ⛑", url="t.me/{}?start=help".format(context.bot.username))
+              ]],
+           ),
+        )
+        
+          return
 
  elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
