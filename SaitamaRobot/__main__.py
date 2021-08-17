@@ -345,9 +345,9 @@ def get_help(update: Update, context: CallbackContext):
                 InlineKeyboardButton(text="⛑ Help ⛑", url="t.me/{}?start=help".format(context.bot.username))
               ]],
            ),
-        )
-        
-          return
+        ),
+            
+            return
 
  elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
